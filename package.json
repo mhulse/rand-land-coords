@@ -1,12 +1,21 @@
 {
   "name": "rand-land-coords",
   "version": "1.0.0",
-  "description": "",
+  "description": "Random latitude and longitude decimal coordinates.",
   "author": "Michael Hulse",
   "license": "Apache 2.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "math",
+    "random",
+    "google",
+    "maps",
+    "lat",
+    "lon",
+    "coords"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/mhulse/rand-land-coords.git"

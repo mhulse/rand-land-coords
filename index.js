@@ -2,16 +2,7 @@ const getPixels = require('get-pixels');
 const getRandomInt = require('random-in-range');
 
 // https://stackoverflow.com/a/36002376/922323
-function degreesToPixels(latitude, longitude, width, height) {
-
-  return {
-    x: Math.round((longitude + 180) * (width / 360)),
-    y: Math.round(((-1 * latitude) + 90) * (height / 180))
-  };
-
-}
-
-function pixelsToDegrees(pixelX, pixelY, width, height) {
+function pxToLatLon(pixelX, pixelY, width, height) {
 
   return {
     latitude: ((pixelY / (height / 180) - 90) / -1),
@@ -36,7 +27,7 @@ function getRandomCoordOverLand(pixels) {
 
   } else {
 
-    return pixelsToDegrees(
+    return pxToLatLon(
       randX,
       randY,
       width,
@@ -73,4 +64,4 @@ async function run(callback) {
 
 }
 
-exports.run = run;
+module.exports = run;
