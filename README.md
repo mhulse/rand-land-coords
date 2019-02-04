@@ -4,14 +4,25 @@ Random latitude and longitude decimal coordinates.
 
 ## About
 
+NASA bathymetry source image:
+
+[![](bathymetry.jpg)](https://visibleearth.nasa.gov/view.php?id=73963)
+
+Converted into bitmap-esque PNG:
+
 ![](map.png)
 
-More info coming soon.
+Used to get random latitude/longitude decimal coordinate above land.
+
+Inspired by this post: [HOW TO add random markers to a map BUT avoiding the sea?](https://stackoverflow.com/a/990177/922323)
 
 ## Usage
 
 ```js
-const coords = require('rand-land-coords');
+const coords = require('rand-land-coords')({
+  // Optional custom map location:
+  map: 'image.png'
+});
 
 (async function start() {
 

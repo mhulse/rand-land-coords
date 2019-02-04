@@ -38,15 +38,15 @@ function getRandomCoordOverLand(pixels) {
 
 }
 
-async function run(callback) {
+async function run(map) {
+
+  map = (map || 'map.png');
 
   return new Promise((fulfilled, rejected) => {
 
-    getPixels('./test/map/map.png', function(err, pixels) {
+    getPixels(map, function(err, pixels) {
 
       if (err) {
-
-        console.log();
 
         return rejected(new Error('Bad image path'));
 
