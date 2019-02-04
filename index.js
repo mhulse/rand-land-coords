@@ -19,7 +19,7 @@ function getRandomCoordOverLand(pixels) {
   let randX = getRandomInt(0, width);
   let randY = getRandomInt(0, height);
 
-  console.log('got pixels', pixels.get(randX, randY, 0), randX, randY)
+  // console.log('got pixels', pixels.get(randX, randY, 0), randX, randY)
 
   if (pixels.get(randX, randY, 0) != 0) {
 
