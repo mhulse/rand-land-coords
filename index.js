@@ -38,7 +38,7 @@ function getRandomCoordOverLand(pixels) {
 
 }
 
-async function run(map) {
+function run(map) {
 
   map = (map || `${__dirname}/map.png`);
 
