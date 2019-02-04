@@ -40,7 +40,7 @@ function getRandomCoordOverLand(pixels) {
 
 async function run(map) {
 
-  map = (map || 'map.png');
+  map = (map || `${__dirname}/map.png`);
 
   return new Promise((fulfilled, rejected) => {
 
