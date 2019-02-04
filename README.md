@@ -18,6 +18,12 @@ Inspired by this post: [HOW TO add random markers to a map BUT avoiding the sea?
 
 ## Usage
 
+```bash
+$ npm i mhulse/rand-land-coords
+```
+
+Next:
+
 ```js
 const coords = require('rand-land-coords')({
   // Optional custom map location:
