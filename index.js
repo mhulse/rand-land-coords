@@ -5,8 +5,8 @@ const getRandomInt = require('random-in-range');
 function pxToLatLon(pixelX, pixelY, width, height) {
 
   return {
-    latitude: ((pixelY / (height / 180) - 90) / -1),
-    longitude: (pixelX / (width / 360) - 180)
+    latitude: parseFloat((((pixelY / (height / 180)) - 90) / -1).toFixed(1)),
+    longitude: parseFloat(((pixelX / (width / 360)) - 180).toFixed(1)),
   };
 
 }
@@ -38,9 +38,9 @@ function getRandomCoordOverLand(pixels) {
 
 }
 
-function run(map) {
+function run(options = {}) {
 
-  map = (map || `${__dirname}/map.png`);
+  map = (options.map || `${__dirname}/map.png`);
 
   return new Promise((fulfilled, rejected) => {
 

@@ -22,30 +22,7 @@ Inspired by this post: [HOW TO add random markers to a map BUT avoiding the sea?
 $ npm i mhulse/rand-land-coords
 ```
 
-Next:
-
-```js
-const coords = require('rand-land-coords')({
-  // Optional custom map location:
-  map: 'image.png'
-});
-
-(async function start() {
-
-  console.log('before');
-
-  await coords().then((res) => {
-    console.log(res); // { latitude: 32, longitude: 96.5 }
-  }).catch((err) => {
-    console.log(err);
-  }).finally(() => {
-    console.log('hello')
-  });
-
-  console.log('after');
-
-})();
-```
+See [`test.js`](test.js) for an example.
 
 ## License
 
